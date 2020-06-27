@@ -7,14 +7,41 @@
 //
 
 import UIKit
+import WebKit
+
 
 class ViewController: UIViewController {
 
+    var webView = WKWebView()
+    
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
+    
+    @IBOutlet weak var toolBar: UIToolbar!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        
+        
+        //大きさ
+        webView.frame = CGRect(x: 0,y: toolBar.frame.size.height, width: view.frame.size.width,height: view.frame.size.height - toolBar.frame.size.height*2)
+        view.addSubview(webView)
+
     }
-
-
+    
+    
+    @IBAction func go(_ sender: Any) {
+        
+        
+    }
+    
+    @IBAction func back(_ sender: Any) {
+        
+        
+        
+    }
+    
 }
 
